@@ -1,11 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:wght@800;1000&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:wght@400;600&display=swap");
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -14,13 +12,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8f8f8;
+    --foreground: #000000;
   }
+}
+
+.about-font {
+  font-family: BlinkMacSystemFont, sans-serif;
+  /* font-family: "EB Garamond", sans-serif; */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Segoe UI", "Helvetica Neue", Helvetica, Cantarell, Ubuntu, Roboto, Noto,
+    Arial, sans-serif;
+}
+
+html {
+  overflow-y: scroll;
 }
