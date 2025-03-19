@@ -19,7 +19,7 @@ const Timeline: React.FC<TimelineProps> = ({ items }) => {
 
   return (
     <section id="Experiences" className="pt-40 pb-10 text-black">
-      <div className="container mx-auto sm:px-6 lg:px-8">
+      <div className="container mx-auto px-8 sm:px-6 lg:px-8">
         {/* <motion.div
           className="text-4xl text-center font-bold mb-8"
           initial={{ opacity: 0, y: -20 }}

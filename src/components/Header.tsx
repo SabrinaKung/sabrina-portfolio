@@ -31,41 +31,21 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white px-8 py-4 shadow-sm">
-      <div className="flex justify-between">
-        {/* Left Column: Name & Description */}
-        <div className="flex flex-col">
-          <h1
-            className="text-3xl font-bold mt-2 mb-2"
-            style={{ letterSpacing: "-0.02em" }}
-          >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white px-6 py-4 shadow-sm">
+      <div className="flex flex-col sm:space-y-4">
+        {/* Top Row: Name & Social Icons */}
+        <div className="flex justify-between items-center w-full">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
             Sabrina Kung
           </h1>
-          <p
-            className="text-sm leading-tight"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            Aspiring software engineer
-          </p>
-          <p
-            className="text-sm leading-tight"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            Passionate about building innovative solutions
-          </p>
-        </div>
-
-        {/* Right Column: Social Icons and Navigation */}
-        <div className="flex flex-col items-end">
-          {/* Social Icons */}
-          <div className="flex space-x-1.5 mt-2">
+          <div className="flex space-x-2">
             {socialIcons.map(({ href, src, alt }) => (
               <a
                 key={alt}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:opacity-80"
+                className="hover:opacity-80"
               >
                 <Image
                   src={src}
@@ -77,39 +57,50 @@ export default function Header() {
               </a>
             ))}
           </div>
-          {/* Navigation Links */}
-          <nav className="mt-5">
-            <ul className="flex p-2 space-x-6 text-l">
+        </div>
+
+        {/* Bottom Row: Description & Navigation */}
+        <div className="flex flex-row justify-between items-center w-full">
+          <div className="text-left">
+            <p className="text-xs leading-tight w-50 sm:w-64">
+              Aspiring software engineer.
+            </p>
+            <p className="text-xs leading-tight w-50 sm:w-80">
+              Passionate about building innovative solutions!
+            </p>
+          </div>
+          <nav>
+            <ul className="flex flex-col space-y-1 text-right sm:flex-row sm:space-y-0 sm:space-x-6 text-base max-sm:text-xs">
               <li>
                 <Link
                   href="/"
-                  className={`tracking-wide transition-colors ${
+                  className={`tracking-wide ${
                     pathname === "/" ? "text-red-500" : "text-gray-800"
                   }`}
                 >
-                  Home
+                  home
                 </Link>
               </li>
               <li>
                 <Link
                   href="/projects"
-                  className={`tracking-wide transition-colors ${
+                  className={`tracking-wide ${
                     pathname === "/projects" ? "text-red-500" : "text-gray-800"
                   }`}
                 >
-                  Projects
+                  projects
                 </Link>
               </li>
               <li>
                 <Link
                   href="/experience"
-                  className={`tracking-wide transition-colors ${
+                  className={`tracking-wide ${
                     pathname === "/experience"
                       ? "text-red-500"
                       : "text-gray-800"
                   }`}
                 >
-                  Experience
+                  experience
                 </Link>
               </li>
             </ul>
