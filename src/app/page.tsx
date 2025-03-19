@@ -16,8 +16,9 @@ export default function Home() {
             <Image
               src="/images/profile/profilePhoto.jpg"
               alt="Profile Image"
-              width={240}
-              height={240}
+              width={400} // Slightly larger to avoid upscaling
+              height={500}
+              quality={100}
               className="w-full h-full object-cover rounded-2xl"
             />
           </div>

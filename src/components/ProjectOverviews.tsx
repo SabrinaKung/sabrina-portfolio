@@ -25,7 +25,7 @@ export default async function ProjectOverviews() {
   });
 
   return (
-    <div className="pt-40 p-30 gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-items-center">
+    <div className="container mx-auto pt-40 px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-10 max-w-[1200px]">
       {projectCardProps.map((props, i) => (
         <ProjectCard key={i} props={props} />
       ))}
